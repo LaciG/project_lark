@@ -1,4 +1,5 @@
 <?php
     return [
-        'error' => 'Az oldal, amit kerestél nem található',
+        //Login
+        	'loginWelcome' => 'Üdv! kérlek jelentkezz be!',
     ];

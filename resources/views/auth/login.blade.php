@@ -87,7 +87,7 @@
             <div class="login__block active" id="l-login">
                 <div class="login__block__header">
                     <i class="zmdi zmdi-account-circle"></i>
-                    Hi there! Please Sign in
+                    {!! __('text.loginWelcome') !!}
 
                     <div class="actions actions--inverse login__block__actions">
                         <div class="dropdown">
