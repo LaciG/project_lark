@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'email' => 'The E-mail was incorrect.',
-    'password' => 'The password was incorrect.',
+    'email' => 'Hibás E-mail cím.',
+    'password' => 'Hibás jelszó.',
 
 ];
