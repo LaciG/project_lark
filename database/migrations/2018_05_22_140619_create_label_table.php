@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserDataTable extends Migration
+class CreateLabelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateUserDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_data', function (Blueprint $table) {
+        Schema::create('label', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('user_id');
-            $table->text('image');
+            $table->text('name');
 
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ class CreateUserDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_data');
+        Schema::dropIfExists('label');
     }
 }
