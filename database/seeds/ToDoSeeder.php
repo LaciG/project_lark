@@ -21,7 +21,9 @@ class ToDoSeeder extends Seeder
             $todo[] = [
                 'name' => $faker->name,
                 'label' => $faker->word,
-                'priority' =>$faker->numberBetween(1,3),
+                'priority' => $faker->numberBetween(1,3),
+                'created_at' => new DateTime,
+                'updated_at' => new DateTime,
             ];
         }
         DB::table('todo')->insert($todo);

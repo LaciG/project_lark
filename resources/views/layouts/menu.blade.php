@@ -239,10 +239,10 @@
             </div>
 
             <div class="dropdown-menu">
-                <a class="dropdown-item" href=' {{ url("/profile/view") }} '>View Profile</a>
-                <a class="dropdown-item" href=" {{ url('/profile/edit') }} ">Settings</a>
+                <a class="dropdown-item" href=' {{ url("/profile/view") }} '>{{__('text.profile')}}</a>
+                <a class="dropdown-item" href=" {{ url('/profile/edit') }} ">{{__('text.settings')}}</a>
 
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Logout') }} </a>
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('text.logout') }} </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
@@ -250,17 +250,17 @@
         </div>
 
         <ul class="navigation">
-            <li><a href=" {{ url('/home') }} "><i class="zmdi zmdi-home"></i> Home</a></li>
+            <li><a href=" {{ url('/home') }} "><i class="zmdi zmdi-home"></i> {{__('text.home')}}</a></li>
 
-            <li><a href=" {{url('/notes') }} "><i class="zmdi zmdi-view-list"></i> Notes</a></li>
+            <li><a href=" {{ url('/notes') }} "><i class="zmdi zmdi-view-list"></i> {{__('text.notes')}}</a></li>
 
-            <li><a href=" {{url('/todo') }} "><i class="zmdi zmdi-collection-text"></i> Todo Lists</a></li>
+            <li><a href=" {{ url('/todo') }} "><i class="zmdi zmdi-collection-text"></i> {{__('text.todo')}}</a></li>
 
-            <li><a href=" {{url('/result') }} "><i class="zmdi zmdi-search"></i> Search Results</a></li>
+            <li><a href=" {{ url('/result') }} "><i class="zmdi zmdi-search"></i> {{__('text.searchResult')}}</a></li>
 
-            {{--  <li><a href="calendar.html"><i class="zmdi zmdi-calendar"></i> Calendar</a></li>
+            <li><a href=" {{ url('/calendar') }}"><i class="zmdi zmdi-calendar"></i> Calendar</a></li>
 
-            <li><a href="photo-gallery.html"><i class="zmdi zmdi-image"></i> Photo Gallery</a></li>
+            {{-- <li><a href="photo-gallery.html"><i class="zmdi zmdi-image"></i> Photo Gallery</a></li>
             
             <li><a href="#"><i class="zmdi zmdi-image"></i> Files</a></li>
             --}}
@@ -271,8 +271,8 @@
 
 <div class="themes">
     <div class="scrollbar-inner">
-        <a href="#" class="themes__item active" data-sa-value="1"><img src="/img/bg/1.jpg" alt=""></a>
-        <a href="#" class="themes__item" data-sa-value="2"><img src="/img/bg/2.jpg" alt=""></a>
+        <a href="#" class="themes__item" data-sa-value="1"><img src="/img/bg/1.jpg" alt=""></a>
+        <a href="#" class="themes__item active" data-sa-value="2"><img src="/img/bg/2.jpg" alt=""></a>
         <a href="#" class="themes__item" data-sa-value="3"><img src="/img/bg/3.jpg" alt=""></a>
         <a href="#" class="themes__item" data-sa-value="4"><img src="/img/bg/4.jpg" alt=""></a>
         <a href="#" class="themes__item" data-sa-value="5"><img src="/img/bg/5.jpg" alt=""></a>
@@ -281,5 +281,5 @@
         <a href="#" class="themes__item" data-sa-value="8"><img src="/img/bg/8.jpg" alt=""></a>
         <a href="#" class="themes__item" data-sa-value="9"><img src="/img/bg/9.jpg" alt=""></a>
         <a href="#" class="themes__item" data-sa-value="10"><img src="/img/bg/10.jpg" alt=""></a>
-    </div>
+    </div> 
 </div>

@@ -19,6 +19,7 @@ class CreateTodoTables extends Migration
             $table->text('name');
             $table->text('label');
             $table->text('priority');
+            $table->enum('finished', ['yes', 'no'])->default('no');
 
             $table->timestamps();
         });

@@ -8,6 +8,9 @@
         <!-- Vendor styles -->
         <link rel="stylesheet" href="/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="/vendors/bower_components/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/bower_components/jqTree/jqtree.css">
+        <link rel="stylesheet" href="vendors/bower_components/sweetalert2/dist/sweetalert2.min.css">
         <link rel="stylesheet" href="vendors/bower_components/trumbowyg/dist/ui/trumbowyg.min.css">
         <link rel="stylesheet" href="/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.css">
         <link rel="stylesheet" href="/vendors/bower_components/select2/dist/css/select2.min.css">
@@ -16,5 +19,5 @@
         <link rel="stylesheet" href="/css/app.min.css">
     </head>
 
-    <body data-sa-theme="1">
+    <body data-sa-theme="2">
         <main class="main">

@@ -91,7 +91,7 @@
                                             <span class="custom-control--char__helper"><i>F</i></span>
                                             <div class="todo__info">
                                                 <span>{{ $todo->name }}</span>
-                                                <small>{{ $todo->created_at }}</small>
+                                                <small>{{ date('M j, Y H:i', strtotime($todo->created_at)) }}</small>
                                             </div>
 
                                             <div class="listview__attrs">
@@ -100,19 +100,22 @@
                                                 </span>
                                             </div>
                                         </label>
-
                                         <div class="actions listview__actions">
-                                            <div class="dropdown actions__item">
-                                                <i class="zmdi zmdi-more-vert" data-toggle="dropdown"></i>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Mark as completed</a>
-                                                    <a class="dropdown-item" href="#">Delete</a>
+                                            <form method="post" action=' {{ url("/todo/$todo->id/destroy") }} '>
+                                                @csrf
+                                                <div class="dropdown actions__item">
+                                                    <i class="zmdi zmdi-more-vert" data-toggle="dropdown"></i>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a class="dropdown-item" href="#">Mark as completed</a>
+                                                        <button type="submit" class="dropdown-item">Delete</button>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                 @endforeach
                             @else
+                                <p class="text-center">Nincs tennivaló! Heah</p>
                             @endif
                             {{ $todos->links() }}
                         </div>
@@ -142,7 +145,6 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="New Label" name="name">
                                 </div>
-
                                 <button type="submit" class="btn btn-light">Create Label</button>
                             </form>
                         </div>

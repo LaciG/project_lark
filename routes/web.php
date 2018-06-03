@@ -35,6 +35,10 @@ Route::post('/todo/store', 'ToDoController@store');
 
 Route::post('/todo/storeLabel', 'ToDoController@storeLabel');
 
+Route::post('/todo/{id}/destroy', 'ToDoController@destroy');
+
+Route::get('/calendar', 'CalendarController@index');
+
 Route::get('/result', function () {
     return view('search_result');
 });
